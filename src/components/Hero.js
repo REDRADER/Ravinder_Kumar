@@ -14,7 +14,7 @@ const Hero = () => {
                     <h2 class="lg--text">I build things for the WWW.</h2>
                 </div>
                 <div class="dis">
-                    <p>I’m a Full Stack Developer specializing in Website Building(and occasionally designing).
+                    <p>I’m a Full in Website Building(and occasionally designing).
                         Currently i’m Working at <a href="tcs.com" class="tcs">TCS.</a></p>
                 </div>
                 <div className='resbtn--div'>
