@@ -22,12 +22,12 @@ const About = () => {
                         <li>JAVA</li>
                         <li>Spring Boot</li>
                         <li>JavaScript</li>
-                        <li>React</li>
+                        <li>React Js</li>
                         <li>Html</li>
                         
+                        <li>Css/BootStrap</li>
                         <li>Python</li>
                         <li>SQL/MySQL</li>
-                        <li>Css/BootStrap</li>
                     </ul>
                 </div>
                 <div className="section--img">

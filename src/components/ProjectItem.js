@@ -9,11 +9,12 @@ const projectItem = (props) => {
             <div className={side?'projectItem--img imgEven':'projectItem--img'}>
                 <div className="projectImgContainer">
                 <img src={props.project.imgUrl} alt="" />
-                <div className='projectImg--overlay'></div>
+                {/* <div className='projectImg--overlay'></div> */}
                 </div>
             </div>
             <div className={side?'projectItem--contents contentsEven':'projectItem--contents'}>
-                <p className="pro--over">{props.project.type}</p>
+                <div className={side?'projectItem--contents-child contentsChildEven':'projectItem--contents-child'}>
+                     <p className="pro--over">{props.project.type}</p>
                 <h3 className="pro--title">{props.project.title}</h3>
                 <div className="pro--des">
                     <p>{props.project.des}</p>
@@ -24,6 +25,8 @@ const projectItem = (props) => {
                     })}
                    
                 </ul>
+                </div>
+               
             </div>
         </div>
     )

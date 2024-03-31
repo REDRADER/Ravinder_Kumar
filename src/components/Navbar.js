@@ -22,7 +22,7 @@ const Navbar = () => {
               </a>
             </ul>
             <div className="nav--btn">
-              <a href="">Resume</a>
+              <a href="resume.pdf">Resume</a>
             </div>
           </div>
         </nav>

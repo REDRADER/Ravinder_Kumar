@@ -263,9 +263,13 @@
   .lg--text
   {
     margin: 0ps;
-    font-size: clamp(40px,8vw,80px);
+    font-size: clamp(45px,8vw,85px);
   }
-
+.lg--text2
+  {
+    margin: 0ps;
+    font-size: clamp(35px,7vw,65px);
+  }
   .dis h1
   {
     font-weight: 600;
@@ -447,7 +451,7 @@
   right: 0;
   width: 100%;
   height: auto;
-  opacity: 20%;
+  opacity: 30%;
   background-color: var(--green);
 }
 .img--over:hover {
@@ -472,6 +476,9 @@
   flex-direction: column;
   margin-top: 40px;
   gap: 50px;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .project--item
@@ -481,58 +488,53 @@
   gap: 10px;
   row-gap: 20px;
   grid-template-columns: repeat(12,1fr);
- 
+  
 }
 .projectItem--contents
 {
-  grid-column: 7/-1;
+ 
   position: relative;
   text-align: right;
   grid-area: 1/6/-1/-1;
   display: flex;
-  flex-direction: column;
+ 
   gap: 5px;
   justify-content: center;
+  align-items: center;
   background-color: transparent;
    /* grid-area: 1/1/-1/7;  */
 }
 .contentsEven
 {
-   grid-area: 1/1/-1/9; 
+   grid-area: 1/1/-1/8; 
    text-align: left;
 }
 
 .projectItem--img
 {
-  grid-column: 1/8;
  
-  /* grid-area: 1/6/-1/-1;  */
  
-  grid-row-start: 1;
-  grid-column-start: 1;
+   grid-area: 1/1/-1/7;  
  
-  grid-column-end: 7;
+
  position: relative;
   max-width: 600px;
   display: flex;
+  justify-content: flex-start;
+  
+ 
 }
 
 .imgEven
 {
   
-  grid-row-start: 1;
-  grid-column-start: 8;
-  grid-row-end: -1;
-  grid-column-end: -1;
+  grid-area: 1/7/-1/-1;
+ 
 }
 .projectImg--overlay
 {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+ 
  
   opacity: 20%;
   background-color: var(--green);
@@ -542,19 +544,44 @@
   opacity: 0%;
 
 }
+.projectImgContainer
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 6px 19px 1px #262827;
+}
+
 .projectImgContainer img
 {
   display: flex;
   width: 100%;
-  box-shadow: 0 10px 30px -15px #262827;
+  border-radius: 5px;
+ 
 }
 
+.projectItem--contents-child
+{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: transparent ;
+gap: 5px;
+
+}
+.contentsChildEven
+{
+  align-items: flex-start;
+}
 .pro--over
 {
 color: var(--green);
 font-family: var(--sf-font);
-font-size: 1.5rem;
+font-size: 1.2rem;
 font-weight: 400;
+line-height: 1.2rem;
 background-color: transparent;
 
 }
@@ -563,25 +590,31 @@ background-color: transparent;
 {
   color: var(--white);
   font-size: clamp(24px,5vw,28px);
-  line-height: 1.1;
+  line-height: 1.8rem;
   font-weight: 600;
-  font-size: 2.2rem;
+  font-size: 2.0rem;
   background-color: transparent;
 }
 
 
-.pro--des p
+.pro--des
 {
   box-shadow: 0 10px 30px -15px #262827;
   z-index: 2;
-  padding: 10px 30px;
+  padding: 10px 10px;
   border-radius: var(--border-radius);
   background-color: #2e3130;
-  font-size: 1.2rem;
-  text-align: justify;
+ 
   color: var(--offwhite);
  
 }
+
+.pro--des p{
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+
 
 .pro--tech
 {
@@ -589,7 +622,17 @@ background-color: transparent;
   background-color: transparent;
   justify-content: end;
   gap: 15px;
+  width: 100%;
+
   margin-top: 10px;
+ 
+
+}
+.pro--tech li
+{
+ 
+  background-color: transparent;
+  
  
 
 }
@@ -746,7 +789,7 @@ margin-top: 10px;
   
 }
 
-@media screen and (max-width:600px)
+@media screen and (max-width:768px)
 {
   .nav--header
   {
@@ -817,7 +860,7 @@ margin-top: 10px;
 }
 .dis h2
 {
-  font-size: clamp(35px,8vw,40px);
+  font-size: clamp(20px,7vw,30px);
 }
 
 .resume--btn
@@ -847,28 +890,24 @@ margin-top: 10px;
 /* projects */
 .project--item
 {
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
+  border-radius: 5px;
   gap: 0;
-  box-shadow: 0px 8px 20px -5px #262827;
-  padding: 10px;
+  box-shadow: 2px 6px 20px 5px #262827;
+  padding: 15px 10px;
 }
 
 .projectItem--img
 {
-   
+  grid-area: 1/1/2/2;
     position: relative;
+
 }
-.imgEven
-{
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
+
 .projectItem--contents
 {
-  grid-row-start: 2;
-  grid-column-start: 1;
-  grid-column-end: 7;
-  grid-area: auto;
+  grid-area: 2/1/3/2;
+ 
   text-align: left;
 }
 .pro--over
@@ -881,7 +920,10 @@ margin-top: 10px;
 }
 .pro--tech
 {
-  justify-content: flex-start;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 5px;
+  
 }
 .contact
 {
